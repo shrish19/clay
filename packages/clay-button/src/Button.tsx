@@ -5,8 +5,9 @@
 
 import classNames from 'classnames';
 import React from 'react';
+import warning from 'warning';
 
-import ButtonGroup from './Group';
+import Group from './Group';
 
 export type DisplayType =
 	| null
@@ -19,7 +20,7 @@ export type DisplayType =
 	| 'info'
 	| 'unstyled';
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Flag to indicate if button is used within an alert component.
 	 */
@@ -85,29 +86,45 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 			...otherProps
 		}: IProps,
 		ref
-	) => (
-		<button
-			className={classNames(className, 'btn', {
-				'alert-btn': alert,
-				'btn-block': block,
-				'btn-monospaced': monospaced,
-				'btn-outline-borderless': borderless,
-				'btn-sm': small && !size,
-				[`btn-${displayType}`]: displayType && !outline && !borderless,
-				[`btn-outline-${displayType}`]:
-					displayType && (outline || borderless),
-				'rounded-pill': rounded,
-				[`btn-${size}`]: size,
-			})}
-			ref={ref}
-			type={type}
-			{...otherProps}
-		>
-			{children}
-		</button>
-	)
+	) => {
+		const childArray = React.Children.toArray(children);
+
+		warning(
+			!(
+				childArray.length === 1 &&
+				// @ts-ignore
+				childArray[0].type?.displayName === 'ClayIcon' &&
+				typeof otherProps['aria-label'] !== 'string' &&
+				typeof otherProps['aria-labelledby'] !== 'string'
+			),
+			'Button Accessibility: Component has only the Icon declared. Define an `aria-label` or `aria-labelledby` attribute that labels the interactive button that screen readers can read. The `title` attribute is optional but consult your design team.'
+		);
+
+		return (
+			<button
+				className={classNames(className, 'btn', {
+					'alert-btn': alert,
+					'btn-block': block,
+					'btn-monospaced': monospaced,
+					'btn-outline-borderless': borderless,
+					'btn-sm': small && !size,
+					[`btn-${displayType}`]:
+						displayType && !outline && !borderless,
+					[`btn-outline-${displayType}`]:
+						displayType && (outline || borderless),
+					'rounded-pill': rounded,
+					[`btn-${size}`]: size,
+				})}
+				ref={ref}
+				type={type}
+				{...otherProps}
+			>
+				{children}
+			</button>
+		);
+	}
 );
 
 ClayButton.displayName = 'ClayButton';
 
-export default Object.assign(ClayButton, {Group: ButtonGroup});
+export default Object.assign(ClayButton, {Group});

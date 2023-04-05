@@ -11,6 +11,10 @@ export interface IProps
 	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**
 	 * Flag to indicate if the component is active or not.
+	 *
+	 * OBS: The `active` API in the new pattern has uncontrolled behavior,
+	 * working just like `defaultActive` as in the prop declared in the
+	 * root component.
 	 */
 	active?: boolean;
 
@@ -69,7 +73,7 @@ const Item = React.forwardRef<any, IProps>(
 				onClick={onClick}
 				ref={ref}
 				role="tab"
-				tabIndex={!active ? -1 : undefined}
+				tabIndex={!active ? -1 : 0}
 			>
 				{children}
 			</LinkOrButton>

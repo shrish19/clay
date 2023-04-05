@@ -119,6 +119,7 @@
 			'font-style',
 			'font-variant',
 			'font-weight',
+			'gap',
 			'grid',
 			'grid-area',
 			'grid-auto-columns',
@@ -199,6 +200,7 @@
 			'position',
 			'resize',
 			'right',
+			'row-gap',
 			'scroll-behavior',
 			'scrollbar-width',
 			'table-layout',
@@ -272,6 +274,12 @@
 					@if ($value != 'none' and $value != null) {
 						@media (prefers-reduced-motion: reduce) {
 							transition: none;
+						}
+
+						@at-root {
+							.c-prefers-reduced-motion & {
+								transition: none;
+							}
 						}
 					}
 				} @else if ($key == 'extend') {

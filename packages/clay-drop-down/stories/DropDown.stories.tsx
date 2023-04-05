@@ -99,7 +99,12 @@ export const Default = (args: any) => (
 				{disabled: true, href: '#three', label: 'three'},
 				{href: '#four', label: 'four'},
 			].map(({href, label, ...otherProps}, i) => (
-				<ClayDropDown.Item href={href} key={i} {...otherProps}>
+				<ClayDropDown.Item
+					href={href}
+					key={i}
+					onClick={() => {}}
+					{...otherProps}
+				>
 					{label}
 				</ClayDropDown.Item>
 			))}
@@ -112,6 +117,84 @@ Default.args = {
 	height: '',
 	renderMenuOnClick: false,
 	width: '',
+};
+
+export const Dynamic = () => (
+	<ClayDropDown
+		items={['one', 'two', 'three', 'four']}
+		trigger={<ClayButton>Click Me</ClayButton>}
+	>
+		{(item) => (
+			<ClayDropDown.Item key={item} onClick={() => {}}>
+				{item}
+			</ClayDropDown.Item>
+		)}
+	</ClayDropDown>
+);
+
+export const DynamicWithSearch = () => {
+	return (
+		<ClayDropDown trigger={<ClayButton>Click Me</ClayButton>}>
+			<ClayDropDown.Search placeholder="Type to filter" />
+			<ClayDropDown.ItemList items={['one', 'two', 'three', 'four']}>
+				{(item: string) => (
+					<ClayDropDown.Item key={item} onClick={() => {}}>
+						{item}
+					</ClayDropDown.Item>
+				)}
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+};
+
+export const DynamicGroup = () => {
+	const items = [
+		{
+			children: [
+				{id: 2, name: 'Apple'},
+				{id: 3, name: 'Banana'},
+				{id: 4, name: 'Mangos'},
+			],
+			id: 1,
+			name: 'Fruit',
+		},
+		{
+			children: [
+				{id: 6, name: 'Potatoes'},
+				{id: 7, name: 'Tomatoes'},
+				{id: 8, name: 'Onions'},
+			],
+			id: 5,
+			name: 'Vegetable',
+		},
+	];
+
+	return (
+		<ClayDropDown
+			filterKey="name"
+			trigger={<ClayButton>Select</ClayButton>}
+		>
+			<ClayDropDown.Search placeholder="Type to filter" />
+			<ClayDropDown.ItemList items={items}>
+				{(item: any) => (
+					<ClayDropDown.Group
+						header={item.name}
+						items={item.children}
+						key={item.name}
+					>
+						{(item: any) => (
+							<ClayDropDown.Item
+								key={item.name}
+								onClick={() => {}}
+							>
+								{item.name}
+							</ClayDropDown.Item>
+						)}
+					</ClayDropDown.Group>
+				)}
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
 };
 
 export const Groups = () => (
@@ -251,6 +334,7 @@ export const ItemsWithIcons = () => (
 			].map((item, i) => (
 				<ClayDropDown.Item
 					key={i}
+					onClick={() => {}}
 					symbolLeft={item.left}
 					symbolRight={item.right}
 				>
@@ -307,7 +391,7 @@ export const AlignmentPositions = () => (
 
 export const Drilldown = (args: any) => (
 	<ClayDropDownWithDrilldown
-		initialActiveMenu="x0a3"
+		defaultActiveMenu="x0a3"
 		menus={{
 			x0a3: [
 				{href: '#', title: 'Hash Link'},
@@ -322,6 +406,10 @@ export const Drilldown = (args: any) => (
 				{child: 'x0a5', title: 'Subnav'},
 			],
 			x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
+		}}
+		messages={{
+			back: 'Back',
+			goTo: 'Go to',
 		}}
 		renderMenuOnClick={args.renderMenuOnClick}
 		trigger={<ClayButton>Click Me</ClayButton>}
@@ -342,7 +430,7 @@ export const DrillDownWithActive = () => {
 	return (
 		<ClayDropDownWithDrilldown
 			active={active}
-			initialActiveMenu="x0a3"
+			defaultActiveMenu="x0a3"
 			menus={{
 				x0a3: [
 					{href: '#', title: 'Hash Link'},
@@ -360,6 +448,10 @@ export const DrillDownWithActive = () => {
 					{child: 'x0a5', title: 'Subnav'},
 				],
 				x0a5: [{title: 'The'}, {title: 'End'}],
+			}}
+			messages={{
+				back: 'Back',
+				goTo: 'Go to',
 			}}
 			onActiveChange={onActiveChange}
 			trigger={<ClayButton>Click Me</ClayButton>}

@@ -3,6 +3,116 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+# [3.90.0](https://github.com/liferay/clay/compare/v3.89.0...v3.90.0) (2023-03-15)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+# [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
+
+### Features
+
+-   **@clayui/drop-down:** add new prop to pass props to DropDown.Search button ([47604f3](https://github.com/liferay/clay/commit/47604f38c99fe294d3e96a420aab0e4699548293))
+
+# [3.88.0](https://github.com/liferay/clay/compare/v3.87.2...v3.88.0) (2023-02-14)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+# [3.87.0](https://github.com/liferay/clay/compare/v3.86.1...v3.87.0) (2023-02-08)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+## [3.86.1](https://github.com/liferay/clay/compare/v3.86.0...v3.86.1) (2023-02-02)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+# [3.86.0](https://github.com/liferay/clay/compare/v3.85.0...v3.86.0) (2023-01-31)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+# [3.84.0](https://github.com/liferay/clay/compare/v3.83.1...v3.84.0) (2022-12-23)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix menu reference error ([4f70e1e](https://github.com/liferay/clay/commit/4f70e1e063ea751a2ad7053f2bd651fa90a4de63))
+
+# [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
+
+### Features
+
+-   removes duplication of implementation of accessibility features for menu using Overlay component ([9d60eb9](https://github.com/liferay/clay/commit/9d60eb9670cb5dc9fc18e02e3a97f139f1db4cfd))
+
+# [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** close drilldown menu returns to initial state ([756e5f5](https://github.com/liferay/clay/commit/756e5f50328c4c071080524495767c3e82c658a8))
+-   **@clayui/drop-down:** fix error add aria-hidden="true" in active Drilldown menu ([43d488f](https://github.com/liferay/clay/commit/43d488fa06250db62bd0ed4c967f1f9ff24bbe91))
+
+### Features
+
+-   **@clayui/drop-down:** adds API to set aria-label of Drilldown stuff ([9ea0b9b](https://github.com/liferay/clay/commit/9ea0b9b86ff68fa51dabb778598f493dc090a42c))
+
+## [3.80.1](https://github.com/liferay/clay/compare/v3.80.0...v3.80.1) (2022-11-22)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** moves focus to first focusable item when pressing down key on trigger ([bd1b114](https://github.com/liferay/clay/commit/bd1b114025870a2d5b95814d56b82b93fc5cdad9))
+
+# [3.80.0](https://github.com/liferay/clay/compare/v3.79.0...v3.80.0) (2022-11-21)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** adds keyboard navigation with looped arrow keys ([c919b22](https://github.com/liferay/clay/commit/c919b226a1f38750042856157f1b45f76306461c))
+-   **@clayui/drop-down:** associates the contextual item with the menu and fixes assertive aria for SRs with contextual menu ([b62b7ba](https://github.com/liferay/clay/commit/b62b7ba93f4f566363a8c7666743594956625f35))
+-   **@clayui/drop-down:** disable tabbing of Menu elements ([81c0b20](https://github.com/liferay/clay/commit/81c0b20452008e15f8c0184cdd1318bad7cab488))
+-   **@clayui/drop-down:** fix keyboard navigation for context menu ([b44c7db](https://github.com/liferay/clay/commit/b44c7db37a53720860b832f12119d40f377a438b))
+
+### Features
+
+-   **@clayui/date-picker:** improves semantic accessibility for the component ([60a7f76](https://github.com/liferay/clay/commit/60a7f7616563faa15817b4daa3525bd842260ef3))
+-   **@clayui/drop-down:** enable typeahead for menu ([6287f96](https://github.com/liferay/clay/commit/6287f9635e7deeb3973b42f8db4ca62ef7bed7d3))
+
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix error when not properly rendering markup for simplified collection ([e0c4fcf](https://github.com/liferay/clay/commit/e0c4fcfd2ad1125e7de980a1be09c7d906b4c722))
+
+### Features
+
+-   **@clayui/drop-down:** add collection pattern ([2335ef2](https://github.com/liferay/clay/commit/2335ef28bb670a0ea145ddc2d8b2bd9ef68c9faa))
+
+## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+## [3.78.1](https://github.com/liferay/clay/compare/v3.78.0...v3.78.1) (2022-10-25)
+
+**Note:** Version bump only for package @clayui/drop-down
+
+# [3.78.0](https://github.com/liferay/clay/compare/v3.77.0...v3.78.0) (2022-10-25)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix error when esc open menu ([9ecc8e4](https://github.com/liferay/clay/commit/9ecc8e4acdebaa60f72ca3f13c22e138518d4540))
+-   **@clayui/drop-down:** fix focus order error ([3062d5e](https://github.com/liferay/clay/commit/3062d5ed09292e187529749607f39f965ed71ae2))
+
 # [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
 
 ### Features

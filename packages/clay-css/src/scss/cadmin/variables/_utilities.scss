@@ -87,13 +87,13 @@ $cadmin-close: map-deep-merge(
 			cursor: $cadmin-disabled-cursor,
 			opacity: $cadmin-component-disabled-opacity,
 			outline: 0,
+			active: (
+				pointer-events: none,
+			),
 		),
-		disabled-active: (
-			pointer-events: none,
+		lexicon-icon: (
+			margin-top: 0,
 		),
-		btn-focus-box-shadow: $cadmin-component-focus-box-shadow,
-		btn-focus-outline: 0,
-		lexicon-icon-margin-top: 0,
 	),
 	$cadmin-close
 );
@@ -104,7 +104,7 @@ $cadmin-c-focus-inset-focus: () !default;
 $cadmin-c-focus-inset-focus: map-deep-merge(
 	(
 		box-shadow: $cadmin-component-focus-inset-box-shadow,
-		border-color: $cadmin-primary-l1,
+		border-color: $cadmin-primary-l0,
 		outline: 0,
 	),
 	$cadmin-c-focus-inset-focus
@@ -171,6 +171,21 @@ $cadmin-inline-item: map-deep-merge(
 // Page Header
 
 $cadmin-page-header-bg: $cadmin-white !default;
+
+// Clay Gap
+
+$cadmin-c-gap: () !default;
+$cadmin-c-gap: map-merge(
+	(
+		0: map-get($cadmin-spacers, 0),
+		1: map-get($cadmin-spacers, 1),
+		2: map-get($cadmin-spacers, 2),
+		3: map-get($cadmin-spacers, 3),
+		4: map-get($cadmin-spacers, 4),
+		5: map-get($cadmin-spacers, 5),
+	),
+	$cadmin-c-gap
+);
 
 // Background
 
@@ -352,8 +367,8 @@ $cadmin-border-theme-colors: map-deep-merge(
 
 // Display
 
-$cadmin-displays: none, inline, inline-block, block, table, table-row,
-	table-cell, flex, inline-flex !default;
+$cadmin-displays: none, inline, inline-block, grid, block, contents, table,
+	table-row, table-cell, flex, inline-flex !default;
 
 // Overflow
 
@@ -369,37 +384,37 @@ $cadmin-font-sizes: () !default;
 $cadmin-font-sizes: map-deep-merge(
 	(
 		text-1: (
-			font-size: 0.625rem,
+			font-size: 10px,
 		),
 		text-2: (
-			font-size: 0.75rem,
+			font-size: 12px,
 		),
 		text-3: (
-			font-size: 0.875rem,
+			font-size: 14px,
 		),
 		text-4: (
-			font-size: 1rem,
+			font-size: 16px,
 		),
 		text-5: (
-			font-size: 1.125rem,
+			font-size: 18px,
 		),
 		text-6: (
-			font-size: 1.25rem,
+			font-size: 20px,
 		),
 		text-7: (
-			font-size: 1.5rem,
+			font-size: 24px,
 		),
 		text-8: (
-			font-size: 1.75rem,
+			font-size: 28px,
 		),
 		text-9: (
-			font-size: 2rem,
+			font-size: 32px,
 		),
 		text-10: (
-			font-size: 2.25rem,
+			font-size: 36px,
 		),
 		text-11: (
-			font-size: 2.5rem,
+			font-size: 40px,
 		),
 	),
 	$cadmin-font-sizes
@@ -512,4 +527,28 @@ $cadmin-text-theme-colors: map-deep-merge(
 		),
 	),
 	$cadmin-text-theme-colors
+);
+
+$cadmin-text-decorations: () !default;
+$cadmin-text-decorations: map-deep-merge(
+	(
+		'.text-none, .text-decoration-none': (
+			text-decoration: none !important,
+		),
+		'.text-underline, .text-decoration-underline': (
+			text-decoration: underline !important,
+		),
+	),
+	$cadmin-text-decorations
+);
+
+// Transitions
+
+$cadmin-c-prefers-reduced-motion: () !default;
+$cadmin-c-prefers-reduced-motion: map-merge(
+	(
+		scroll-behavior: auto,
+		transition: clay-enable-transitions(none),
+	),
+	$cadmin-c-prefers-reduced-motion
 );

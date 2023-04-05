@@ -4,6 +4,7 @@
  */
 
 import {ClayPortal, IPortalBaseProps} from '@clayui/shared';
+import {suppressOthers} from 'aria-hidden';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 import warning from 'warning';
@@ -86,6 +87,7 @@ const ClayModal = ({
 	containerProps = {},
 	disableAutoClose = false,
 	observer,
+	role = 'dialog',
 	size,
 	spritemap,
 	status,
@@ -95,6 +97,9 @@ const ClayModal = ({
 	const modalElementRef = useRef<HTMLDivElement | null>(null);
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
 
+	const [show, content] =
+		observer && observer.mutation ? observer.mutation : [false, false];
+
 	warning(observer !== undefined, warningMessage);
 
 	useUserInteractions(
@@ -103,13 +108,16 @@ const ClayModal = ({
 		() => !disableAutoClose && observer.dispatch(ObserverType.Close)
 	);
 
-	useEffect(() => observer.dispatch(ObserverType.Open), []);
+	useEffect(() => {
+		observer.dispatch(ObserverType.RestoreFocus, document.activeElement);
+		observer.dispatch(ObserverType.Open);
+	}, []);
 
 	useEffect(() => {
-		if (modalBodyElementRef.current) {
+		if (modalBodyElementRef.current && show && content) {
 			modalBodyElementRef.current.focus();
 		}
-	}, [modalBodyElementRef]);
+	}, [show, content]);
 
 	const ariaLabelledby = useMemo(() => {
 		counter++;
@@ -117,8 +125,12 @@ const ClayModal = ({
 		return `clay-modal-label-${counter}`;
 	}, []);
 
-	const [show, content] =
-		observer && observer.mutation ? observer.mutation : [false, false];
+	useEffect(() => {
+		if (modalElementRef.current && show) {
+			// Hide everything from ARIA except the Modal Body
+			return suppressOthers(modalElementRef.current);
+		}
+	}, [show]);
 
 	return (
 		<ClayPortal
@@ -143,13 +155,14 @@ const ClayModal = ({
 			>
 				<div
 					aria-labelledby={ariaLabelledby}
+					aria-modal="true"
 					className={classNames('modal-dialog', {
 						[`modal-${size}`]: size,
 						[`modal-${status}`]: status,
 						'modal-dialog-centered': center,
 					})}
 					ref={modalBodyElementRef}
-					role="dialog"
+					role={role}
 					tabIndex={-1}
 				>
 					<div className="modal-content">

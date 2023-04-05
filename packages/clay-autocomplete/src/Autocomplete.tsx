@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {DropDown, __NOT_PUBLIC_COLLECTION} from '@clayui/core';
+import {__NOT_PUBLIC_COLLECTION} from '@clayui/core';
+import DropDown from '@clayui/drop-down';
 import {ClayInput as Input} from '@clayui/form';
 import LoadingIndicator from '@clayui/loading-indicator';
 import {
@@ -13,7 +14,6 @@ import {
 	useId,
 	useInternalState,
 } from '@clayui/shared';
-import {hideOthers} from 'aria-hidden';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import type {ICollectionProps} from '@clayui/core';
@@ -118,6 +118,8 @@ export interface IProps<T>
 	loadingState?: number;
 }
 
+const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
+
 export function Autocomplete<T extends Record<string, any>>({
 	active: externalActive,
 	alignmentByViewport,
@@ -182,25 +184,6 @@ export function Autocomplete<T extends Record<string, any>>({
 
 	useEffect(() => {
 		if (active) {
-			const onFocus = (event: FocusEvent) => {
-				if (
-					!inputRef.current?.contains(event.target as Node) &&
-					!menuRef.current?.contains(event.target as Node)
-				) {
-					setActive(false);
-				}
-			};
-
-			document.addEventListener('focus', onFocus, true);
-
-			return () => {
-				document.removeEventListener('focus', onFocus, true);
-			};
-		}
-	}, [active]);
-
-	useEffect(() => {
-		if (active) {
 			const onKeyDown = (event: KeyboardEvent) => {
 				if (
 					inputRef.current &&
@@ -219,13 +202,6 @@ export function Autocomplete<T extends Record<string, any>>({
 	}, [active]);
 
 	useEffect(() => {
-		if (menuRef.current && inputRef.current && active) {
-			// Hide everything from ARIA except the MenuElement and Input
-			return hideOthers([menuRef.current, inputRef.current]);
-		}
-	}, [active]);
-
-	useEffect(() => {
 		if (active === false) {
 			setValue(currentItemSelected.current);
 		}
@@ -238,7 +214,10 @@ export function Autocomplete<T extends Record<string, any>>({
 	}, [value]);
 
 	const filterFn = useCallback(
-		(itemValue: string) => itemValue.match(new RegExp(value, 'i')) !== null,
+		(itemValue: string) =>
+			itemValue.match(
+				new RegExp(value.replace(ESCAPE_REGEXP, '\\$&'), 'i')
+			) !== null,
 		[value]
 	);
 
@@ -314,7 +293,6 @@ export function Autocomplete<T extends Record<string, any>>({
 				alignmentByViewport={alignmentByViewport}
 				autoBestAlign={!!alignmentByViewport}
 				className="autocomplete-dropdown-menu"
-				focusRefOnEsc={inputRef}
 				id={ariaControlsId}
 				onActiveChange={setActive}
 				ref={menuRef}
@@ -322,6 +300,8 @@ export function Autocomplete<T extends Record<string, any>>({
 					maxWidth: 'none',
 					width: `${containerElementRef.current?.clientWidth}px`,
 				}}
+				suppress={[menuRef, inputRef]}
+				triggerRef={inputRef}
 			>
 				<Collection<T>
 					aria-label={otherProps['aria-label']}

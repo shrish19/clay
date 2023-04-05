@@ -75,6 +75,10 @@ $input: map-deep-merge(
 	$input
 );
 
+// Form Control Variants
+
+$input-palette: () !default;
+
 $input-height-border: calc(
 	#{$input-border-bottom-width} + #{$input-border-top-width}
 ) !default;
@@ -397,6 +401,36 @@ $input-select-icon-disabled: clay-icon(
 	$input-select-icon-disabled-color
 ) !default;
 
+// Form Control Select Variants
+
+$form-control-select-palette: () !default;
+$form-control-select-palette: map-deep-merge(
+	(
+		form-control-select-secondary: (
+			background-color: $white,
+			color: $gray-600,
+			hover: (
+				color: $gray-600,
+			),
+			focus: (
+				background-image: clay-icon(caret-double-l, $gray-900),
+				color: $gray-900,
+			),
+			disabled: (
+				background-color: $white,
+				color: $gray-600,
+				opacity: $component-disabled-opacity,
+			),
+			show: (
+				background-color: $gray-200,
+				background-image: clay-icon(caret-double-l, $gray-900),
+				color: $gray-900,
+			),
+		),
+	),
+	$form-control-select-palette
+);
+
 // select.form-control[size]
 
 // focus.option.checked: Chrome can't style text, we invert colors to make text white
@@ -409,16 +443,18 @@ $input-select-size: map-deep-merge(
 		focus: (
 			option: (
 				checked: (
-					background-image: linear-gradient(#ffa700, #ffa700),
-					color: #fff,
-					filter: invert(100%),
+					background-image: linear-gradient(#ffb528, #ffb528),
+					filter: invert(1),
 				),
 			),
 		),
 		option: (
 			padding: 0.4375rem 0.5rem,
-			checked: (
+			hover: (
 				background-image: linear-gradient(#{$gray-300}, #{$gray-300}),
+			),
+			checked: (
+				background-image: linear-gradient(#{$light-d2}, #{$light-d2}),
 			),
 		),
 		firefox-only: (
@@ -430,9 +466,6 @@ $input-select-size: map-deep-merge(
 						filter: invert(0),
 					),
 				),
-			),
-			option: (
-				padding: 0.40625rem 0.5rem,
 			),
 		),
 	),

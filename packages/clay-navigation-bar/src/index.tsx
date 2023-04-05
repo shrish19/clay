@@ -13,8 +13,16 @@ import {CSSTransition} from 'react-transition-group';
 import warning from 'warning';
 
 import Item from './Item';
+import {NavigationBarContext} from './context';
 
-export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IProps
+	extends Omit<React.HTMLAttributes<HTMLDivElement>, 'aria-current'> {
+	/**
+	 * Flag to define if the item represents the current page. Disable this
+	 * attribute only if there are multiple navigations on the page.
+	 */
+	itemAriaCurrent?: boolean;
+
 	/**
 	 * Children elements received from ClayNavigationBar component.
 	 */
@@ -46,6 +54,7 @@ function ClayNavigationBar({
 	children,
 	className,
 	inverted = false,
+	itemAriaCurrent: ariaCurrent = true,
 	spritemap,
 	triggerLabel,
 	...otherProps
@@ -68,7 +77,7 @@ function ClayNavigationBar({
 			className={classNames(
 				className,
 				'navbar',
-				'navbar-collapse-absolute',
+				'navbar-collapse-relative',
 				'navbar-expand-md',
 				'navbar-underline',
 				'navigation-bar',
@@ -78,56 +87,62 @@ function ClayNavigationBar({
 				}
 			)}
 		>
-			<ClayLayout.ContainerFluid>
-				<ClayButton
-					aria-expanded={expanded}
-					className={classNames(
-						'navbar-toggler',
-						'navbar-toggler-link',
-						{
-							collapsed: !expanded,
+			<NavigationBarContext.Provider
+				value={{ariaCurrent: ariaCurrent ? 'page' : null}}
+			>
+				<ClayLayout.ContainerFluid>
+					<ClayButton
+						aria-expanded={expanded}
+						className={classNames(
+							'navbar-toggler',
+							'navbar-toggler-link',
+							{
+								collapsed: !expanded,
+							}
+						)}
+						data-testid="navbarToggler"
+						displayType="unstyled"
+						onClick={() => setExpanded(!expanded)}
+					>
+						<span className="navbar-text-truncate">
+							{triggerLabel}
+						</span>
+
+						<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
+					</ClayButton>
+
+					<CSSTransition
+						className={classNames('navbar-collapse', {
+							collapse: !expanded,
+						})}
+						classNames={{
+							enter: 'collapsing',
+							enterActive: `show`,
+							enterDone: 'show',
+							exit: `show`,
+							exitActive: 'collapsing',
+						}}
+						in={expanded}
+						onEnter={(element: HTMLElement) =>
+							element.setAttribute('style', `height: 0px`)
 						}
-					)}
-					data-testid="navbarToggler"
-					displayType="unstyled"
-					onClick={() => setExpanded(!expanded)}
-				>
-					<span className="navbar-text-truncate">{triggerLabel}</span>
-
-					<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
-				</ClayButton>
-
-				<CSSTransition
-					className={classNames('navbar-collapse', {
-						collapse: !expanded,
-					})}
-					classNames={{
-						enter: 'collapsing',
-						enterActive: `show`,
-						enterDone: 'show',
-						exit: `show`,
-						exitActive: 'collapsing',
-					}}
-					in={expanded}
-					onEnter={(element: HTMLElement) =>
-						element.setAttribute('style', `height: 0px`)
-					}
-					onEntering={(element: HTMLElement) =>
-						setElementFullHeight(element)
-					}
-					onExit={(element) => setElementFullHeight(element)}
-					onExiting={(element) =>
-						element.setAttribute('style', `height: 0px`)
-					}
-					timeout={250}
-				>
-					<div>
-						<ClayLayout.ContainerFluid>
-							<ul className="navbar-nav">{children}</ul>
-						</ClayLayout.ContainerFluid>
-					</div>
-				</CSSTransition>
-			</ClayLayout.ContainerFluid>
+						onEntering={(element: HTMLElement) =>
+							setElementFullHeight(element)
+						}
+						onExit={(element) => setElementFullHeight(element)}
+						onExiting={(element) =>
+							element.setAttribute('style', `height: 0px`)
+						}
+						timeout={250}
+					>
+						<div>
+							<ClayLayout.ContainerFluid>
+								<ul className="navbar-nav">{children}</ul>
+							</ClayLayout.ContainerFluid>
+						</div>
+					</CSSTransition>
+				</ClayLayout.ContainerFluid>
+			</NavigationBarContext.Provider>
 		</nav>
 	);
 }

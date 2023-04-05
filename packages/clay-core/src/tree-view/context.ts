@@ -23,6 +23,11 @@ export type OnLoadMore<T> = (
 	cursor?: any
 ) => Promise<Array<any> | undefined> | Promise<LoadMoreCursor | undefined>;
 
+export type MoveItemIndex = {
+	next: number;
+	previous: number;
+};
+
 export interface ITreeViewContext<T> extends ITreeState<T> {
 	childrenRoot: React.MutableRefObject<ChildrenFunction<Object> | null>;
 	dragAndDrop?: boolean;
@@ -31,7 +36,8 @@ export interface ITreeViewContext<T> extends ITreeState<T> {
 	expanderClassName?: string;
 	expanderIcons?: Icons;
 	nestedKey?: string;
-	onItemMove?: (item: T, parentItem: T) => boolean;
+	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
+	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => void;
 	onLoadMore?: OnLoadMore<T>;
 	onSelect?: (item: T) => void;
 	onRenameItem?: (item: T) => Promise<any>;
@@ -48,8 +54,13 @@ export function useTreeViewContext(): ITreeViewContext<unknown> {
 	return useContext(TreeViewContext);
 }
 
+type SelectionToggleOptions = {
+	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
+	parentSelection?: boolean;
+};
+
 export type Selection = {
-	toggle: (key: Key) => void;
+	toggle: (key: Key, options?: SelectionToggleOptions) => void;
 	has: (key: Key) => boolean;
 };
 
@@ -107,6 +118,10 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 					} else if (items.items) {
 						cursors.current.set(id, items.cursor);
 						insert([...layoutItem.loc, 0], items.items);
+
+						if (willToggle && !expandedKeys.has(id)) {
+							toggle(id);
+						}
 					}
 				})
 				.catch((error) => {

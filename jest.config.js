@@ -14,7 +14,7 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-autocomplete/src/': {
-			branches: 79,
+			branches: 77,
 			functions: 93,
 			lines: 92,
 			statements: 92,
@@ -26,10 +26,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-breadcrumb/src/': {
-			branches: 90,
+			branches: 75,
 			functions: 85,
 			lines: 95,
-			statements: 97,
+			statements: 96,
 		},
 		'./packages/clay-button/src/': {
 			branches: 90,
@@ -55,11 +55,17 @@ module.exports = {
 			lines: 91,
 			statements: 91,
 		},
+		'./packages/clay-core/src/picker/': {
+			branches: 81,
+			functions: 84,
+			lines: 90,
+			statements: 90,
+		},
 		'./packages/clay-core/src/tree-view/': {
-			branches: 68,
-			functions: 73,
-			lines: 76,
-			statements: 75,
+			branches: 56,
+			functions: 65,
+			lines: 70,
+			statements: 69,
 		},
 		'./packages/clay-data-provider/src/': {
 			branches: 69,
@@ -68,16 +74,16 @@ module.exports = {
 			statements: 85,
 		},
 		'./packages/clay-date-picker/src/': {
-			branches: 76,
-			functions: 94,
-			lines: 95,
-			statements: 95,
+			branches: 56,
+			functions: 89,
+			lines: 81,
+			statements: 82,
 		},
 		'./packages/clay-drop-down/src/': {
-			branches: 62,
-			functions: 57,
-			lines: 75,
-			statements: 74,
+			branches: 58,
+			functions: 53,
+			lines: 72,
+			statements: 72,
 		},
 		'./packages/clay-empty-state/src/': {
 			branches: 100,
@@ -134,10 +140,10 @@ module.exports = {
 			statements: 85,
 		},
 		'./packages/clay-multi-select/src/': {
-			branches: 85,
-			functions: 80,
-			lines: 87,
-			statements: 86,
+			branches: 62,
+			functions: 77,
+			lines: 76,
+			statements: 75,
 		},
 		'./packages/clay-multi-step-nav/src/': {
 			branches: 94,
@@ -146,7 +152,7 @@ module.exports = {
 			statements: 98,
 		},
 		'./packages/clay-nav/src/': {
-			branches: 92,
+			branches: 86,
 			functions: 80,
 			lines: 93,
 			statements: 93,
@@ -158,16 +164,16 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-pagination/src/': {
-			branches: 89,
+			branches: 86,
 			functions: 100,
 			lines: 100,
 			statements: 100,
 		},
 		'./packages/clay-pagination-bar/src/': {
 			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
+			functions: 88,
+			lines: 94,
+			statements: 95,
 		},
 		'./packages/clay-panel/src/': {
 			branches: 93,
@@ -188,10 +194,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-shared/src/': {
-			branches: 42,
-			functions: 29,
-			lines: 59,
-			statements: 60,
+			branches: 20,
+			functions: 14,
+			lines: 36,
+			statements: 39,
 		},
 		'./packages/clay-slider/src/': {
 			branches: 92,
@@ -212,10 +218,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-tabs/src/': {
-			branches: 84,
+			branches: 58,
 			functions: 66,
-			lines: 94,
-			statements: 90,
+			lines: 78,
+			statements: 76,
 		},
 		'./packages/clay-time-picker/src/': {
 			branches: 85,

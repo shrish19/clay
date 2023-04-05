@@ -112,6 +112,10 @@ $cadmin-input: map-deep-merge(
 	$cadmin-input
 );
 
+// Form Control Variants
+
+$cadmin-input-palette: () !default;
+
 // Form Control Plaintext
 
 $cadmin-input-plaintext-color: $cadmin-body-color !default;
@@ -388,7 +392,7 @@ $cadmin-form-control-inset: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group: () !default;
-$cadmin-form-control-tag-group: map-deep-merge(
+$cadmin-form-control-tag-group: map-merge(
 	(
 		align-items: center,
 		color: $cadmin-secondary,
@@ -404,7 +408,7 @@ $cadmin-form-control-tag-group: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group-autofit-row: () !default;
-$cadmin-form-control-tag-group-autofit-row: map-deep-merge(
+$cadmin-form-control-tag-group-autofit-row: map-merge(
 	(
 		align-items: center,
 		flex-grow: 1,
@@ -416,7 +420,7 @@ $cadmin-form-control-tag-group-autofit-row: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group-autofit-col: () !default;
-$cadmin-form-control-tag-group-autofit-col: map-deep-merge(
+$cadmin-form-control-tag-group-autofit-col: map-merge(
 	(
 		padding-left: 8px,
 		padding-right: 8px,
@@ -425,7 +429,7 @@ $cadmin-form-control-tag-group-autofit-col: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group-input-group-item: () !default;
-$cadmin-form-control-tag-group-input-group-item: map-deep-merge(
+$cadmin-form-control-tag-group-input-group-item: map-merge(
 	(
 		align-items: center,
 	),
@@ -433,7 +437,7 @@ $cadmin-form-control-tag-group-input-group-item: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group-inline-item: () !default;
-$cadmin-form-control-tag-group-inline-item: map-deep-merge(
+$cadmin-form-control-tag-group-inline-item: map-merge(
 	(
 		height: $cadmin-form-control-inset-min-height,
 		margin-bottom: $cadmin-form-control-inset-margin-y,
@@ -1205,6 +1209,7 @@ $cadmin-form-control-select: map-deep-merge(
 				appearance: null,
 				cursor: null,
 				overflow: hidden,
+				text-align: left,
 				text-overflow: ellipsis,
 				white-space: nowrap,
 				hover: (
@@ -1215,6 +1220,36 @@ $cadmin-form-control-select: map-deep-merge(
 		)
 	),
 	$cadmin-form-control-select
+);
+
+// Form Control Select Variants
+
+$cadmin-form-control-select-palette: () !default;
+$cadmin-form-control-select-palette: map-deep-merge(
+	(
+		form-control-select-secondary: (
+			background-color: $cadmin-white,
+			color: $cadmin-gray-600,
+			hover: (
+				color: $cadmin-gray-600,
+			),
+			focus: (
+				background-image: clay-icon(caret-double-l, $cadmin-gray-900),
+				color: $cadmin-gray-900,
+			),
+			disabled: (
+				background-color: $cadmin-white,
+				color: $cadmin-gray-600,
+				opacity: $cadmin-component-disabled-opacity,
+			),
+			show: (
+				background-color: $cadmin-gray-200,
+				background-image: clay-icon(caret-double-l, $cadmin-gray-900),
+				color: $cadmin-gray-900,
+			),
+		),
+	),
+	$cadmin-form-control-select-palette
 );
 
 $cadmin-form-control-select-sm: () !default;

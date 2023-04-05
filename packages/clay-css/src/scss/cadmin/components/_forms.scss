@@ -180,6 +180,18 @@ fieldset[disabled] .form-control {
 	}
 }
 
+@each $key, $value in $cadmin-input-palette {
+	$selector: if(
+		starts-with($key, '.') or starts-with($key, '#'),
+		$key,
+		str-insert($key, '.', 1)
+	);
+
+	#{$selector} {
+		@include clay-form-control-variant($value);
+	}
+}
+
 .form-control-hidden {
 	left: 0;
 	opacity: 0;
@@ -203,14 +215,14 @@ div {
 }
 
 .form-control-tag-group {
-	@include clay-container($cadmin-form-control-tag-group);
+	@include clay-css($cadmin-form-control-tag-group);
 
 	.autofit-row {
-		@include clay-container($cadmin-form-control-tag-group-autofit-row);
+		@include clay-css($cadmin-form-control-tag-group-autofit-row);
 	}
 
 	.autofit-col {
-		@include clay-container($cadmin-form-control-tag-group-autofit-col);
+		@include clay-css($cadmin-form-control-tag-group-autofit-col);
 
 		.form-control-inset {
 			width: auto;
@@ -218,13 +230,11 @@ div {
 	}
 
 	.input-group-item {
-		@include clay-container(
-			$cadmin-form-control-tag-group-input-group-item
-		);
+		@include clay-css($cadmin-form-control-tag-group-input-group-item);
 	}
 
 	.inline-item {
-		@include clay-container($cadmin-form-control-tag-group-inline-item);
+		@include clay-css($cadmin-form-control-tag-group-inline-item);
 	}
 
 	.btn {
@@ -309,6 +319,20 @@ select.form-control[size] {
 
 select.form-control[multiple] {
 	@include clay-select-variant($cadmin-input-select-multiple);
+}
+
+// Form Control Select Variants
+
+@each $key, $value in $cadmin-form-control-select-palette {
+	$selector: if(
+		starts-with($key, '.') or starts-with($key, '#'),
+		$key,
+		str-insert($key, '.', 1)
+	);
+
+	#{$selector} {
+		@include clay-select-variant($value);
+	}
 }
 
 // Textarea

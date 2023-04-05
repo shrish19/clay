@@ -3,6 +3,98 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.90.0](https://github.com/liferay/clay/compare/v3.89.0...v3.90.0) (2023-03-15)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.88.0](https://github.com/liferay/clay/compare/v3.87.2...v3.88.0) (2023-02-14)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.87.0](https://github.com/liferay/clay/compare/v3.86.1...v3.87.0) (2023-02-08)
+
+**Note:** Version bump only for package @clayui/pagination
+
+## [3.86.1](https://github.com/liferay/clay/compare/v3.86.0...v3.86.1) (2023-02-02)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.86.0](https://github.com/liferay/clay/compare/v3.85.0...v3.86.0) (2023-01-31)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** Adds tabindex to links with no href ([566ae6b](https://github.com/liferay/clay/commit/566ae6b56f7bf10bbbbaa8140ab626f2666ab077))
+-   **@clayui/pagination:** fix error when `totalPages` is 0 ([16d6094](https://github.com/liferay/clay/commit/16d60941ecd7d5f50c0cd5d51ff6bb925cc26707))
+-   **@clayui/pagination:** remove link from Prev and Next when disabled ([6552d93](https://github.com/liferay/clay/commit/6552d93a6c103c9c8e9bfc1fbcc654821afeaea0))
+
+# [3.84.0](https://github.com/liferay/clay/compare/v3.83.1...v3.84.0) (2022-12-23)
+
+**Note:** Version bump only for package @clayui/pagination
+
+## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** Items should be links only ([d3c09be](https://github.com/liferay/clay/commit/d3c09be75afc28b9a6924dd33b0d67b3842c8c1a))
+-   **@clayui/pagination:** Map aria-label to the nav element ([7500043](https://github.com/liferay/clay/commit/750004328032cee3c9e4146f164be1f91b68a47a))
+-   **@clayui/pagination:** preventDefault on ClayLink when there is no href and SF ([1264f24](https://github.com/liferay/clay/commit/1264f242338bb794a66ab33d262677c42509a0f7))
+-   **@clayui/pagination:** Use @clayui/shared sub to replace placeholder text ([d99aa66](https://github.com/liferay/clay/commit/d99aa66259c9d83a0da809d677e1b2620d6653d1))
+
+### Features
+
+-   **@clayui/pagination:** PaginationWithBasicItems should have aria-labels by default ([262d686](https://github.com/liferay/clay/commit/262d68636d4d2432442e86ab9943c1355eb63e96))
+-   **@clayui/pagination:** Wraps pagination in nav element and adds navProps attribute ([d17a125](https://github.com/liferay/clay/commit/d17a12529c16fcd34962cf7fa57a8aa08dc0db67))
+
+# [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** add `aria-label` and `title` to ellipsis ([be831e5](https://github.com/liferay/clay/commit/be831e582f9c54c37535fd4267caff19c7ed74d8))
+
+# [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
+
+**Note:** Version bump only for package @clayui/pagination
+
+## [3.80.1](https://github.com/liferay/clay/compare/v3.80.0...v3.80.1) (2022-11-22)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.80.0](https://github.com/liferay/clay/compare/v3.79.0...v3.80.0) (2022-11-21)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+**Note:** Version bump only for package @clayui/pagination
+
+## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
+
+**Note:** Version bump only for package @clayui/pagination
+
+## [3.78.1](https://github.com/liferay/clay/compare/v3.78.0...v3.78.1) (2022-10-25)
+
+**Note:** Version bump only for package @clayui/pagination
+
+# [3.78.0](https://github.com/liferay/clay/compare/v3.77.0...v3.78.0) (2022-10-25)
+
+**Note:** Version bump only for package @clayui/pagination
+
 # [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
 
 **Note:** Version bump only for package @clayui/pagination

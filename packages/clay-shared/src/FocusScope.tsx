@@ -115,6 +115,7 @@ export const FocusScope = ({
 					if (r) {
 						elRef.current = r;
 						const {ref} = child;
+
 						if (ref) {
 							if (typeof ref === 'object') {
 								ref.current = r;

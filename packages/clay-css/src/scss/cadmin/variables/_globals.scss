@@ -120,6 +120,7 @@ $cadmin-colors: map-merge(
 $cadmin-primary: #0b5fff !default;
 $cadmin-primary-d1: clay-darken($cadmin-primary, 5.1) !default;
 $cadmin-primary-d2: clay-darken($cadmin-primary, 10) !default;
+$cadmin-primary-l0: clay-lighten($cadmin-primary, 13.92) !default;
 $cadmin-primary-l1: clay-lighten($cadmin-primary, 22.94) !default;
 $cadmin-primary-l2: clay-lighten($cadmin-primary, 32.94) !default;
 $cadmin-primary-l3: clay-lighten($cadmin-primary, 44.9) !default;
@@ -133,6 +134,10 @@ $cadmin-secondary-d2: clay-darken(
 	clay-saturate($cadmin-secondary, 5.36),
 	23.92
 ) !default;
+$cadmin-secondary-l0: clay-lighten(
+	clay-saturate(clay-adjust-hue($cadmin-secondary, 3), 0.03),
+	11.18
+);
 $cadmin-secondary-l1: clay-lighten(
 	clay-saturate(clay-adjust-hue($cadmin-secondary, -3), 5.39),
 	23.92
@@ -314,8 +319,8 @@ $cadmin-component-transition: color 0.15s ease-in-out,
 	box-shadow 0.15s ease-in-out !default;
 
 $cadmin-component-focus-box-shadow: #{0 0 0 2px $cadmin-white,
-	0 0 0 4px $cadmin-primary-l1} !default;
-$cadmin-component-focus-inset-box-shadow: #{inset 0 0 0 2px $cadmin-primary-l1,
+	0 0 0 4px $cadmin-primary-l0} !default;
+$cadmin-component-focus-inset-box-shadow: #{inset 0 0 0 2px $cadmin-primary-l0,
 	inset 0 0 0 4px $cadmin-white} !default;
 
 $cadmin-component-active-bg: $cadmin-primary !default;
@@ -693,6 +698,7 @@ $cadmin-link: map-deep-merge(
 		color: $cadmin-link-color,
 		cursor: $cadmin-link-cursor,
 		text-decoration: $cadmin-link-decoration,
+		text-underline-offset: 0.23em,
 		hover: (
 			color: $cadmin-link-hover-color,
 			text-decoration: $cadmin-link-hover-decoration,

@@ -4,7 +4,11 @@
 }
 
 .form-file-input {
-	cursor: $input-file-cursor;
+	cursor: if(
+		variable-exists(input-file-cursor),
+		$input-file-cursor,
+		$link-cursor
+	);
 	height: 100%;
 	opacity: 0;
 	overflow: hidden;
@@ -13,7 +17,11 @@
 	z-index: 10;
 
 	&::-webkit-file-upload-button {
-		cursor: $input-file-cursor;
+		cursor: if(
+			variable-exists(input-file-cursor),
+			$input-file-cursor,
+			$link-cursor
+		);
 	}
 
 	&:focus {
@@ -52,10 +60,18 @@
 	}
 
 	&:disabled {
-		cursor: $input-disabled-cursor;
+		cursor: if(
+			variable-exists(input-disabled-cursor),
+			$input-disabled-cursor,
+			$disabled-cursor
+		);
 
 		&::-webkit-file-upload-button {
-			cursor: $input-disabled-cursor;
+			cursor: if(
+				variable-exists(input-disabled-cursor),
+				$input-disabled-cursor,
+				$disabled-cursor
+			);
 		}
 	}
 }
@@ -75,7 +91,15 @@
 }
 
 .custom-control-label {
-	@include clay-container($custom-control-label);
+	@include clay-css($custom-control-label);
+
+	&::before {
+		@include clay-css(map-get($custom-control-label, before));
+	}
+
+	&::after {
+		@include clay-css(map-get($custom-control-label, after));
+	}
 }
 
 label.custom-control-label {
@@ -83,11 +107,19 @@ label.custom-control-label {
 }
 
 .custom-control-label-text {
-	@include clay-container($custom-control-label-text);
+	@include clay-css($custom-control-label-text);
+
+	&::before {
+		@include clay-css(map-get($custom-control-label-text, before));
+	}
+
+	&::after {
+		@include clay-css(map-get($custom-control-label-text, after));
+	}
 
 	small,
 	.small {
-		@include clay-container($custom-control-label-text-small);
+		@include clay-css($custom-control-label-text-small);
 	}
 }
 
@@ -95,7 +127,19 @@ label.custom-control-label {
 
 .custom-control-primary {
 	.custom-control-label-text {
-		@include clay-container($custom-control-primary-label-text);
+		@include clay-css($custom-control-primary-label-text);
+
+		&::before {
+			@include clay-css(
+				map-get($custom-control-primary-label-text, before)
+			);
+		}
+
+		&::after {
+			@include clay-css(
+				map-get($custom-control-primary-label-text, after)
+			);
+		}
 	}
 }
 
@@ -240,8 +284,16 @@ label.custom-control-label {
 				// in IE and (under certain conditions) Edge.
 				// See https://github.com/twbs/bootstrap/issues/19398.
 
-				background-color: $input-bg;
-				color: $input-color;
+				background-color: if(
+					variable-exists(input-bg),
+					$input-bg,
+					$white
+				);
+				color: if(
+					variable-exists(input-color),
+					$input-color,
+					$gray-700
+				);
 			}
 		}
 

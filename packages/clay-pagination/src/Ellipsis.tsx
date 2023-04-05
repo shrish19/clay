@@ -5,9 +5,11 @@
 
 import ClayButton from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
+import {sub} from '@clayui/shared';
 import React from 'react';
 
 export interface IPaginationEllipsisProps {
+	'aria-label'?: string;
 	alignmentPosition?: React.ComponentProps<
 		typeof ClayDropDownWithItems
 	>['alignmentPosition'];
@@ -16,6 +18,7 @@ export interface IPaginationEllipsisProps {
 	hrefConstructor?: (page?: number) => string;
 	items?: Array<number>;
 	onPageChange?: (page?: number) => void;
+	title?: string;
 }
 
 const ClayPaginationEllipsis = ({
@@ -25,6 +28,7 @@ const ClayPaginationEllipsis = ({
 	hrefConstructor,
 	items = [],
 	onPageChange,
+	...otherProps
 }: IPaginationEllipsisProps) => {
 	const pages = disabled
 		? []
@@ -35,6 +39,22 @@ const ClayPaginationEllipsis = ({
 				onClick: () => onPageChange && onPageChange(page),
 		  }));
 
+	const ariaLabel =
+		otherProps['aria-label'] && !disabled
+			? sub(otherProps['aria-label'], [
+					pages[0]?.label as string,
+					pages[pages.length - 1]?.label as string,
+			  ])
+			: undefined;
+
+	const title =
+		otherProps['title'] && !disabled
+			? sub(otherProps['title'], [
+					pages[0]?.label as string,
+					pages[pages.length - 1]?.label as string,
+			  ])
+			: undefined;
+
 	return (
 		<ClayDropDownWithItems
 			alignmentPosition={alignmentPosition}
@@ -43,9 +63,12 @@ const ClayPaginationEllipsis = ({
 			items={pages}
 			trigger={
 				<ClayButton
+					{...otherProps}
+					aria-label={ariaLabel}
 					className="page-link"
 					disabled={disabled}
 					displayType="unstyled"
+					title={title}
 				>
 					...
 				</ClayButton>

@@ -5,6 +5,7 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -12,7 +13,10 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
     >
       <div
         aria-expanded="false"
+        aria-labelledby="clay-id-13"
+        aria-owns="clay-id-14"
         class="treeview-link"
+        data-id="string,Root"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -61,11 +65,13 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
             <div
               class="autofit-col autofit-col-expand"
             >
-              <div
+              <span
                 class="component-text"
+                id="clay-id-13"
+                tabindex="-1"
               >
                 Root
-              </div>
+              </span>
             </div>
           </div>
         </span>
@@ -80,6 +86,7 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -87,7 +94,10 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
     >
       <div
         aria-expanded="false"
+        aria-labelledby="clay-id-22"
+        aria-owns="clay-id-23"
         class="treeview-link"
+        data-id="string,Foo"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -136,11 +146,13 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
             <div
               class="autofit-col autofit-col-expand"
             >
-              <div
+              <span
                 class="component-text"
+                id="clay-id-22"
+                tabindex="-1"
               >
                 Foo
-              </div>
+              </span>
             </div>
           </div>
         </span>
@@ -155,6 +167,7 @@ exports[`TreeView basic rendering render static content 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -162,7 +175,10 @@ exports[`TreeView basic rendering render static content 1`] = `
     >
       <div
         aria-expanded="false"
+        aria-labelledby="clay-id-4"
+        aria-owns="clay-id-5"
         class="treeview-link"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -211,11 +227,13 @@ exports[`TreeView basic rendering render static content 1`] = `
             <div
               class="autofit-col autofit-col-expand"
             >
-              <div
+              <span
                 class="component-text"
+                id="clay-id-4"
+                tabindex="-1"
               >
                 Root
-              </div>
+              </span>
             </div>
           </div>
         </span>
@@ -230,13 +248,17 @@ exports[`TreeView basic rendering render with actions 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
       role="none"
     >
       <div
+        aria-labelledby="clay-id-58"
+        aria-owns="clay-id-59"
         class="treeview-link"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 24px;"
         tabindex="0"
@@ -252,33 +274,30 @@ exports[`TreeView basic rendering render with actions 1`] = `
             <div
               class="autofit-col autofit-col-expand"
             >
-              <div
+              <span
                 class="component-text"
+                id="clay-id-58"
+                tabindex="-1"
               >
                 Root
-              </div>
+              </span>
             </div>
             <div
               class="autofit-col"
             >
               <button
                 class="component-action quick-action-item btn btn-monospaced"
-                tabindex="-1"
+                tabindex="0"
                 type="button"
               >
-                <div
-                  class="c-inner"
-                  tabindex="-2"
+                <svg
+                  class="lexicon-icon lexicon-icon-times"
+                  role="presentation"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-times"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#times"
-                    />
-                  </svg>
-                </div>
+                  <use
+                    xlink:href="icons.svg#times"
+                  />
+                </svg>
               </button>
             </div>
             <div
@@ -292,23 +311,17 @@ exports[`TreeView basic rendering render with actions 1`] = `
                   aria-expanded="false"
                   aria-haspopup="true"
                   class="dropdown-toggle component-action quick-action-item btn btn-monospaced"
-                  style=""
-                  tabindex="-1"
+                  tabindex="0"
                   type="button"
                 >
-                  <div
-                    class="c-inner"
-                    tabindex="-2"
+                  <svg
+                    class="lexicon-icon lexicon-icon-ellipsis-v"
+                    role="presentation"
                   >
-                    <svg
-                      class="lexicon-icon lexicon-icon-ellipsis-v"
-                      role="presentation"
-                    >
-                      <use
-                        xlink:href="icons.svg#ellipsis-v"
-                      />
-                    </svg>
-                  </div>
+                    <use
+                      xlink:href="icons.svg#ellipsis-v"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -325,6 +338,7 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -332,7 +346,10 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
     >
       <div
         aria-expanded="false"
+        aria-labelledby="clay-id-85"
+        aria-owns="clay-id-86"
         class="treeview-link"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -398,11 +415,13 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
             <div
               class="autofit-col autofit-col-expand"
             >
-              <div
+              <span
                 class="component-text"
+                id="clay-id-85"
+                tabindex="-1"
               >
                 Root
-              </div>
+              </span>
             </div>
           </div>
         </span>
@@ -417,6 +436,7 @@ exports[`TreeView basic rendering render with item active 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -424,7 +444,10 @@ exports[`TreeView basic rendering render with item active 1`] = `
     >
       <div
         aria-expanded="false"
+        aria-labelledby="clay-id-142"
+        aria-owns="clay-id-143"
         class="treeview-link active"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -490,11 +513,13 @@ exports[`TreeView basic rendering render with item active 1`] = `
             <div
               class="autofit-col autofit-col-expand"
             >
-              <div
+              <span
                 class="component-text"
+                id="clay-id-142"
+                tabindex="-1"
               >
                 Root
-              </div>
+              </span>
             </div>
           </div>
         </span>
@@ -509,6 +534,7 @@ exports[`TreeView basic rendering render with text 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -516,7 +542,10 @@ exports[`TreeView basic rendering render with text 1`] = `
     >
       <div
         aria-expanded="false"
+        aria-labelledby="clay-id-94"
+        aria-owns="clay-id-95"
         class="treeview-link"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -582,15 +611,17 @@ exports[`TreeView basic rendering render with text 1`] = `
             <div
               class="autofit-col autofit-col-expand"
             >
-              <div
+              <span
                 class="component-text"
+                id="clay-id-94"
+                tabindex="-1"
               >
                 <span
                   class="text-3 text-truncate"
                 >
                   Root
                 </span>
-              </div>
+              </span>
             </div>
           </div>
         </span>

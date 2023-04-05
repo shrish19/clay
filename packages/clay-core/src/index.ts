@@ -7,11 +7,6 @@ export {
 	default as Button,
 	ClayButtonWithIcon as ButtonWithIcon,
 } from '@clayui/button';
-export {
-	default as DropDown,
-	ClayDropDownWithItems as DropDownWithItems,
-	ClayDropDownWithDrilldown as DropDownWithDrilldown,
-} from '@clayui/drop-down';
 export {default as Icon} from '@clayui/icon';
 export {
 	default as Modal,
@@ -20,10 +15,12 @@ export {
 } from '@clayui/modal';
 export {Provider, useProvider} from '@clayui/provider';
 
-export {Heading, Text} from './typography';
+export {Heading, Text, TextHighlight} from './typography';
 export {OverlayMask} from './overlay-mask';
 export {TreeView} from './tree-view';
 export {VerticalBar} from './vertical-bar';
+export {Picker, Option} from './picker';
+export {FocusTrap} from './focus-trap';
 
 // Internal dependencies not public but exposed to other Clay packages.
 export * as __NOT_PUBLIC_COLLECTION from './collection';

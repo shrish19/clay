@@ -3,6 +3,98 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** Tabs deprecate `displayType` and `modern` attributes ([196abec](https://github.com/liferay/clay/commit/196abec5383d05f9af15af6893e9062fc32ba1c9))
+
+### Features
+
+-   **@clayui/tabs:** force style for tabs ([859ef65](https://github.com/liferay/clay/commit/859ef65a552c2b8ad04c04fec1ad505c53c6dd40))
+
+### BREAKING CHANGES
+
+-   **@clayui/tabs:** The default value for the `modern` attribute is now `false`. You will need to set the `modern` attribute on `ClayTabs` to get the `nav-underline` class.
+
+# [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
+
+**Note:** Version bump only for package @clayui/tabs
+
+# [3.88.0](https://github.com/liferay/clay/compare/v3.87.2...v3.88.0) (2023-02-14)
+
+### Features
+
+-   **@clayui/tabs:** adds `forwardRef` to Tabs components ([a1792ce](https://github.com/liferay/clay/commit/a1792cea9a05d41ef177993a7c724fe673c9673f))
+
+# [3.87.0](https://github.com/liferay/clay/compare/v3.86.1...v3.87.0) (2023-02-08)
+
+### Features
+
+-   **@clayui/tabs:** adds the pattern of uncontrolled to the `active` property of Tabs.Item in the new composition ([fd5299a](https://github.com/liferay/clay/commit/fd5299a6148f67de85b4d8f565ce2331f137472e))
+
+## [3.86.1](https://github.com/liferay/clay/compare/v3.86.0...v3.86.1) (2023-02-02)
+
+**Note:** Version bump only for package @clayui/tabs
+
+# [3.86.0](https://github.com/liferay/clay/compare/v3.85.0...v3.86.0) (2023-01-31)
+
+**Note:** Version bump only for package @clayui/tabs
+
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+**Note:** Version bump only for package @clayui/tabs
+
+## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
+
+**Note:** Version bump only for package @clayui/tabs
+
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+**Note:** Version bump only for package @clayui/tabs
+
+# [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
+
+**Note:** Version bump only for package @clayui/tabs
+
+# [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
+
+**Note:** Version bump only for package @clayui/tabs
+
+## [3.80.1](https://github.com/liferay/clay/compare/v3.80.0...v3.80.1) (2022-11-22)
+
+**Note:** Version bump only for package @clayui/tabs
+
+# [3.80.0](https://github.com/liferay/clay/compare/v3.79.0...v3.80.0) (2022-11-21)
+
+**Note:** Version bump only for package @clayui/tabs
+
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
+-   **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
+-   **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
+
+### Features
+
+-   **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
+
+## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
+
+**Note:** Version bump only for package @clayui/tabs
+
+## [3.78.1](https://github.com/liferay/clay/compare/v3.78.0...v3.78.1) (2022-10-25)
+
+**Note:** Version bump only for package @clayui/tabs
+
+# [3.78.0](https://github.com/liferay/clay/compare/v3.77.0...v3.78.0) (2022-10-25)
+
+### Features
+
+-   **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
+
 # [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
 
 ### Bug Fixes

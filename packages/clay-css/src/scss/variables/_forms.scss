@@ -110,6 +110,10 @@ $input: map-deep-merge(
 	$input
 );
 
+// Form Control Variants
+
+$input-palette: () !default;
+
 // Form Control Plaintext
 
 $input-plaintext-color: $body-color !default;
@@ -435,7 +439,7 @@ $form-control-inset: map-deep-merge(
 );
 
 $form-control-tag-group: () !default;
-$form-control-tag-group: map-deep-merge(
+$form-control-tag-group: map-merge(
 	(
 		align-items: center,
 		color: $secondary,
@@ -451,7 +455,7 @@ $form-control-tag-group: map-deep-merge(
 );
 
 $form-control-tag-group-autofit-row: () !default;
-$form-control-tag-group-autofit-row: map-deep-merge(
+$form-control-tag-group-autofit-row: map-merge(
 	(
 		align-items: center,
 		flex-grow: 1,
@@ -463,7 +467,7 @@ $form-control-tag-group-autofit-row: map-deep-merge(
 );
 
 $form-control-tag-group-autofit-col: () !default;
-$form-control-tag-group-autofit-col: map-deep-merge(
+$form-control-tag-group-autofit-col: map-merge(
 	(
 		padding-left: 0.5rem,
 		padding-right: 0.5rem,
@@ -472,7 +476,7 @@ $form-control-tag-group-autofit-col: map-deep-merge(
 );
 
 $form-control-tag-group-input-group-item: () !default;
-$form-control-tag-group-input-group-item: map-deep-merge(
+$form-control-tag-group-input-group-item: map-merge(
 	(
 		align-items: center,
 	),
@@ -480,7 +484,7 @@ $form-control-tag-group-input-group-item: map-deep-merge(
 );
 
 $form-control-tag-group-inline-item: () !default;
-$form-control-tag-group-inline-item: map-deep-merge(
+$form-control-tag-group-inline-item: map-merge(
 	(
 		height: $form-control-inset-min-height,
 		margin-bottom: $form-control-inset-margin-y,
@@ -1248,6 +1252,7 @@ $form-control-select: map-deep-merge(
 				appearance: null,
 				cursor: null,
 				overflow: hidden,
+				text-align: left,
 				text-overflow: ellipsis,
 				white-space: nowrap,
 				hover: (
@@ -1259,6 +1264,12 @@ $form-control-select: map-deep-merge(
 	),
 	$form-control-select
 );
+
+// Form Control Select Variants
+
+$form-control-select-palette: () !default;
+
+// Form Control Select Sizes
 
 $form-control-select-sm: () !default;
 $form-control-select-sm: map-deep-merge(
@@ -1282,6 +1293,7 @@ $input-select-size: map-deep-merge(
 	(
 		background-image: none,
 		height: auto,
+		margin-left: 0,
 		padding-left: 0.5rem,
 		padding-right: 0.5rem,
 		scrollbar-width: thin,
@@ -2069,9 +2081,13 @@ $input-group-stacked-sm-down: () !default;
 $input-group-stacked-sm-down: map-deep-merge(
 	(
 		breakpoint: sm,
-		item-margin-bottom: 0.5rem,
-		item-margin-left: 0,
-		shrink-margin-right: 0.5rem,
+		input-group-item: (
+			margin-bottom: 0.5rem,
+			margin-left: 0,
+		),
+		input-group-item-shrink: (
+			margin-right: 0.5rem,
+		),
 	),
 	$input-group-stacked-sm-down
 );

@@ -38,6 +38,7 @@ export const Default = () => (
 
 		<ClayPaginationWithBasicItems
 			activePage={1}
+			ellipsisProps={{'aria-label': 'More', title: 'More'}}
 			onPageChange={() => {}}
 			totalPages={10}
 		/>
@@ -62,6 +63,9 @@ export const WithItems = (args: any) => {
 		{
 			label: 4,
 		},
+		{
+			label: 5,
+		},
 	];
 
 	return (
@@ -69,6 +73,7 @@ export const WithItems = (args: any) => {
 			activeDelta={delta}
 			deltas={deltas}
 			ellipsisBuffer={args.ellipsisBuffer}
+			ellipsisProps={{'aria-label': 'More', title: 'More'}}
 			onDeltaChange={setDelta}
 			totalItems={args.totalItems}
 		/>
@@ -88,6 +93,7 @@ export const WithoutDropdown = () => {
 			activeDelta={delta}
 			defaultActive={3}
 			ellipsisBuffer={3}
+			ellipsisProps={{'aria-label': 'More', title: 'More'}}
 			onDeltaChange={setDelta}
 			showDeltasDropDown={false}
 			totalItems={21}

@@ -103,6 +103,7 @@ $colors: map-merge(
 $primary: #0b5fff !default;
 $primary-d1: clay-darken($primary, 5.1) !default;
 $primary-d2: clay-darken($primary, 10) !default;
+$primary-l0: clay-lighten($primary, 13.92) !default;
 $primary-l1: clay-lighten($primary, 22.94) !default;
 $primary-l2: clay-lighten($primary, 32.94) !default;
 $primary-l3: clay-lighten($primary, 44.9) !default;
@@ -110,6 +111,10 @@ $primary-l3: clay-lighten($primary, 44.9) !default;
 $secondary: #6b6c7e !default;
 $secondary-d1: clay-darken(clay-saturate($secondary, 4.82), 20) !default;
 $secondary-d2: clay-darken(clay-saturate($secondary, 5.36), 23.92) !default;
+$secondary-l0: clay-lighten(
+	clay-saturate(clay-adjust-hue($secondary, 3), 0.03),
+	11.18
+);
 $secondary-l1: clay-lighten(
 	clay-saturate(clay-adjust-hue($secondary, -3), 5.39),
 	23.92
@@ -268,8 +273,8 @@ $component-transition: color 0.15s ease-in-out,
 	background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
 	box-shadow 0.15s ease-in-out !default;
 
-$component-focus-box-shadow: #{0 0 0 0.125rem $white, 0 0 0 0.25rem $primary-l1} !default;
-$component-focus-inset-box-shadow: #{inset 0 0 0 0.125rem $primary-l1,
+$component-focus-box-shadow: #{0 0 0 0.125rem $white, 0 0 0 0.25rem $primary-l0} !default;
+$component-focus-inset-box-shadow: #{inset 0 0 0 0.125rem $primary-l0,
 	inset 0 0 0 0.25rem $white} !default;
 
 $component-active-color: #fff !default;

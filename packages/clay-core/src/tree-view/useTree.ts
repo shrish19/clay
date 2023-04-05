@@ -36,14 +36,14 @@ export interface IExpandable {
 	/**
 	 * Flag to indicate the hydration phase to expand the selected items. When
 	 * `selectionMode` is `multiple-recursive` it also revalidates the
-	 * intermediate state of the items.
+	 * indeterminate state of the items.
 	 *
 	 * It supports two rendering phases, render-first and hydrate after or
 	 * hydrate before rendering, both have trade-offs that depend on the number
 	 * of items being rendered.
 	 *
 	 * Both cases traverse the tree looking for the selected items to know which
-	 * items should be expanded and which should be in the intermediate state,
+	 * items should be expanded and which should be in the indeterminate state,
 	 * this is done only the first time the component is rendered and if it has
 	 * selected items. This operation can degrade the performance of the
 	 * component depending on the number of items, choose the best option for
@@ -106,6 +106,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 	const selection = useMultipleSelection<T>({
 		defaultSelectedKeys: props.defaultSelectedKeys,
+		indeterminate: props.indeterminate,
 		items,
 		layoutKeys: layout.layoutKeys,
 		nestedKey: props.nestedKey,
@@ -119,6 +120,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		defaultValue: () => {
 			const {
 				defaultExpandedKeys,
+				indeterminate,
 				nestedKey,
 				selectionHydrationMode,
 				selectionMode,
@@ -139,8 +141,8 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 					selection.selectedKeys
 				);
 
-				if (selectionMode === 'multiple-recursive') {
-					selection.replaceIntermediateKeys(
+				if (selectionMode === 'multiple-recursive' && indeterminate) {
+					selection.replaceIndeterminateKeys(
 						expand.filter((key) => !selection.selectedKeys.has(key))
 					);
 				}
@@ -163,6 +165,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	useEffect(() => {
 		const {
 			defaultExpandedKeys,
+			indeterminate,
 			nestedKey,
 			selectionHydrationMode,
 			selectionMode,
@@ -183,8 +186,8 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 				selection.selectedKeys
 			);
 
-			if (selectionMode === 'multiple-recursive') {
-				selection.replaceIntermediateKeys(
+			if (selectionMode === 'multiple-recursive' && indeterminate) {
+				selection.replaceIndeterminateKeys(
 					expand.filter((key) => !selection.selectedKeys.has(key))
 				);
 			}
@@ -421,7 +424,15 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 	function nodeByPath(path: Array<number>) {
 		const queue = [...path];
-		const rootIndex: number = queue.shift() as number;
+
+		let rootIndex: number = queue.shift() as number;
+
+		// In an operation of moving an item from the root, it affects the indexes
+		// by having to delete first and then add. This is the same behavior
+		// as below.
+		if (!immutableTree[rootIndex]) {
+			rootIndex -= 1;
+		}
 
 		let item = {...immutableTree[rootIndex]};
 		let parent = null;
@@ -526,22 +537,32 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 					const pathToAdd = nodeByPath(path);
 
+					// It has the same parent the index can change
+					const isSameParent =
+						[...from].slice(0, -1).join('') ===
+						[...path].slice(0, -1).join('');
+
+					let index = path[path.length - 1];
+
+					// If moving an item within the same parent and the drop position of
+					// the item is greater than the origin it affects the position
+					// because the item is always removed first, we just fix the position
+					// by decreasing.
+					if (isSameParent && nodeToRemove.index < pathToAdd.index) {
+						index -= 1;
+					}
+
 					if (pathToAdd.parent) {
 						pathToAdd.parent[nestedKey] = [
-							...pathToAdd.parent[nestedKey].slice(
-								0,
-								pathToAdd.index
-							),
+							...pathToAdd.parent[nestedKey].slice(0, index),
 							nodeToRemove.item,
-							...pathToAdd.parent[nestedKey].slice(
-								pathToAdd.index
-							),
+							...pathToAdd.parent[nestedKey].slice(index),
 						];
 					} else {
 						immutableTree = [
-							...immutableTree.slice(0, pathToAdd.index),
+							...immutableTree.slice(0, index),
 							nodeToRemove.item,
-							...immutableTree.slice(pathToAdd.index),
+							...immutableTree.slice(index),
 						] as T;
 					}
 

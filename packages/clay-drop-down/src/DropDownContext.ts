@@ -5,7 +5,17 @@
 
 import React from 'react';
 
-export const DropDownContext = React.createContext({
+type Context = {
+	close: () => void;
+	closeOnClick: boolean;
+	filterKey?: string;
+	onSearch: (value: string) => void;
+	search: string;
+	tabFocus: boolean;
+};
+
+export const DropDownContext = React.createContext<Context>({
 	close: () => {},
 	closeOnClick: false,
-});
+	tabFocus: true,
+} as Context);

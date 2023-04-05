@@ -2,7 +2,10 @@
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Friday 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -29,6 +32,9 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-7"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -49,17 +55,25 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-7"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
+          aria-label="April 2019"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -158,6 +172,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the previous month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the previous month"
                   type="button"
                 >
                   <svg
@@ -172,6 +187,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select current date"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select current date"
                   type="button"
                 >
                   <svg
@@ -186,6 +202,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the next month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the next month"
                   type="button"
                 >
                   <svg
@@ -202,9 +219,12 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -286,13 +306,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="0"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Mar 29 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -300,10 +325,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Mar 30 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -311,10 +339,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   31
@@ -322,10 +353,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -333,10 +367,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -344,10 +381,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -355,10 +395,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -367,13 +410,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="1"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -381,10 +429,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   6
@@ -392,10 +443,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   7
@@ -403,10 +457,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   8
@@ -414,10 +471,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   9
@@ -425,10 +485,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   10
@@ -436,10 +499,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   11
@@ -448,13 +514,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="2"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   12
@@ -462,10 +533,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   13
@@ -473,10 +547,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   14
@@ -484,10 +561,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   15
@@ -495,10 +575,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   16
@@ -506,21 +589,27 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   17
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
                   class="date-picker-date date-picker-calendar-item active"
+                  data-index="6"
                   type="button"
                 >
                   18
@@ -529,13 +618,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="3"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   19
@@ -543,10 +637,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   20
@@ -554,10 +651,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   21
@@ -565,10 +665,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   22
@@ -576,10 +679,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   23
@@ -587,10 +693,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   24
@@ -598,10 +707,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   25
@@ -610,13 +722,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="4"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   26
@@ -624,10 +741,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -635,10 +755,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -646,10 +769,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -657,10 +783,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -668,10 +797,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -679,10 +811,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -693,13 +828,22 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Monday 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -726,6 +870,9 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-3"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -746,17 +893,25 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-3"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
+          aria-label="April 2019"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -855,6 +1010,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the previous month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the previous month"
                   type="button"
                 >
                   <svg
@@ -869,6 +1025,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select current date"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select current date"
                   type="button"
                 >
                   <svg
@@ -883,6 +1040,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the next month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the next month"
                   type="button"
                 >
                   <svg
@@ -899,9 +1057,12 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -983,13 +1144,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="0"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   31
@@ -997,10 +1163,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -1008,10 +1177,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -1019,10 +1191,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -1030,10 +1205,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -1041,10 +1219,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -1052,10 +1233,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   6
@@ -1064,13 +1248,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="1"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   7
@@ -1078,10 +1267,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   8
@@ -1089,10 +1281,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   9
@@ -1100,10 +1295,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   10
@@ -1111,10 +1309,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   11
@@ -1122,10 +1323,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   12
@@ -1133,10 +1337,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   13
@@ -1145,13 +1352,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="2"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   14
@@ -1159,10 +1371,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   15
@@ -1170,10 +1385,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   16
@@ -1181,21 +1399,27 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   17
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
                   class="date-picker-date date-picker-calendar-item active"
+                  data-index="4"
                   type="button"
                 >
                   18
@@ -1203,10 +1427,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   19
@@ -1214,10 +1441,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   20
@@ -1226,13 +1456,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="3"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   21
@@ -1240,10 +1475,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   22
@@ -1251,10 +1489,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   23
@@ -1262,10 +1503,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   24
@@ -1273,10 +1517,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   25
@@ -1284,10 +1531,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   26
@@ -1295,10 +1545,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -1307,13 +1560,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="4"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -1321,10 +1579,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -1332,10 +1593,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -1343,10 +1607,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -1354,10 +1621,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -1365,10 +1635,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 03 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -1376,10 +1649,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat May 04 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -1390,13 +1666,22 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Saturday 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -1423,6 +1708,9 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-8"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -1443,17 +1731,25 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-8"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
+          aria-label="April 2019"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -1552,6 +1848,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the previous month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the previous month"
                   type="button"
                 >
                   <svg
@@ -1566,6 +1863,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select current date"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select current date"
                   type="button"
                 >
                   <svg
@@ -1580,6 +1878,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the next month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the next month"
                   type="button"
                 >
                   <svg
@@ -1596,9 +1895,12 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -1680,13 +1982,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="0"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Mar 30 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -1694,10 +2001,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   31
@@ -1705,10 +2015,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -1716,10 +2029,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -1727,10 +2043,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -1738,10 +2057,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -1749,10 +2071,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -1761,13 +2086,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="1"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   6
@@ -1775,10 +2105,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   7
@@ -1786,10 +2119,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   8
@@ -1797,10 +2133,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   9
@@ -1808,10 +2147,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   10
@@ -1819,10 +2161,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   11
@@ -1830,10 +2175,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   12
@@ -1842,13 +2190,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="2"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   13
@@ -1856,10 +2209,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   14
@@ -1867,10 +2223,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   15
@@ -1878,10 +2237,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   16
@@ -1889,21 +2251,27 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   17
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
                   class="date-picker-date date-picker-calendar-item active"
+                  data-index="5"
                   type="button"
                 >
                   18
@@ -1911,10 +2279,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   19
@@ -1923,13 +2294,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="3"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   20
@@ -1937,10 +2313,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   21
@@ -1948,10 +2327,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   22
@@ -1959,10 +2341,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   23
@@ -1970,10 +2355,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   24
@@ -1981,10 +2369,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   25
@@ -1992,10 +2383,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   26
@@ -2004,13 +2398,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="4"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -2018,10 +2417,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -2029,10 +2431,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -2040,10 +2445,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -2051,10 +2459,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -2062,10 +2473,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -2073,10 +2487,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 03 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -2087,13 +2504,22 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Sunday 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -2120,6 +2546,9 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-2"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -2140,17 +2569,25 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-2"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
+          aria-label="April 2019"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -2249,6 +2686,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the previous month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the previous month"
                   type="button"
                 >
                   <svg
@@ -2263,6 +2701,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select current date"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select current date"
                   type="button"
                 >
                   <svg
@@ -2277,6 +2716,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the next month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the next month"
                   type="button"
                 >
                   <svg
@@ -2293,9 +2733,12 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -2377,13 +2820,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="0"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   31
@@ -2391,10 +2839,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -2402,10 +2853,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -2413,10 +2867,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -2424,10 +2881,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -2435,10 +2895,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -2446,10 +2909,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   6
@@ -2458,13 +2924,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="1"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   7
@@ -2472,10 +2943,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   8
@@ -2483,10 +2957,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   9
@@ -2494,10 +2971,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   10
@@ -2505,10 +2985,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   11
@@ -2516,10 +2999,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   12
@@ -2527,10 +3013,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   13
@@ -2539,13 +3028,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="2"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   14
@@ -2553,10 +3047,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   15
@@ -2564,10 +3061,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   16
@@ -2575,21 +3075,27 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   17
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
                   class="date-picker-date date-picker-calendar-item active"
+                  data-index="4"
                   type="button"
                 >
                   18
@@ -2597,10 +3103,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   19
@@ -2608,10 +3117,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   20
@@ -2620,13 +3132,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="3"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   21
@@ -2634,10 +3151,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   22
@@ -2645,10 +3165,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   23
@@ -2656,10 +3179,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   24
@@ -2667,10 +3193,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   25
@@ -2678,10 +3207,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   26
@@ -2689,10 +3221,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -2701,13 +3236,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="4"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -2715,10 +3255,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -2726,10 +3269,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -2737,10 +3283,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -2748,10 +3297,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -2759,10 +3311,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 03 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -2770,10 +3325,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat May 04 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -2784,13 +3342,22 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Thursday 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -2817,6 +3384,9 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-6"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -2837,17 +3407,25 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-6"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
+          aria-label="April 2019"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -2946,6 +3524,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the previous month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the previous month"
                   type="button"
                 >
                   <svg
@@ -2960,6 +3539,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select current date"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select current date"
                   type="button"
                 >
                   <svg
@@ -2974,6 +3554,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the next month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the next month"
                   type="button"
                 >
                   <svg
@@ -2990,9 +3571,12 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -3074,13 +3658,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="0"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Mar 28 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -3088,10 +3677,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Mar 29 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -3099,10 +3691,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Mar 30 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -3110,10 +3705,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   31
@@ -3121,10 +3719,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -3132,10 +3733,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -3143,10 +3747,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -3155,13 +3762,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="1"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -3169,10 +3781,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -3180,10 +3795,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   6
@@ -3191,10 +3809,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   7
@@ -3202,10 +3823,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   8
@@ -3213,10 +3837,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   9
@@ -3224,10 +3851,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   10
@@ -3236,13 +3866,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="2"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   11
@@ -3250,10 +3885,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   12
@@ -3261,10 +3899,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   13
@@ -3272,10 +3913,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   14
@@ -3283,10 +3927,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   15
@@ -3294,10 +3941,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   16
@@ -3305,10 +3955,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   17
@@ -3317,13 +3970,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="3"
+              role="row"
             >
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
                   class="date-picker-date date-picker-calendar-item active"
+                  data-index="0"
                   type="button"
                 >
                   18
@@ -3331,10 +3989,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   19
@@ -3342,10 +4003,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   20
@@ -3353,10 +4017,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   21
@@ -3364,10 +4031,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   22
@@ -3375,10 +4045,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   23
@@ -3386,10 +4059,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   24
@@ -3398,13 +4074,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="4"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   25
@@ -3412,10 +4093,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   26
@@ -3423,10 +4107,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -3434,10 +4121,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -3445,10 +4135,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -3456,10 +4149,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -3467,10 +4163,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -3481,13 +4180,22 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Tuesday 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -3514,6 +4222,9 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-4"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -3534,17 +4245,25 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-4"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
+          aria-label="April 2019"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -3643,6 +4362,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the previous month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the previous month"
                   type="button"
                 >
                   <svg
@@ -3657,6 +4377,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select current date"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select current date"
                   type="button"
                 >
                   <svg
@@ -3671,6 +4392,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the next month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the next month"
                   type="button"
                 >
                   <svg
@@ -3687,9 +4409,12 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -3771,13 +4496,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="0"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Mar 26 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   26
@@ -3785,10 +4515,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Mar 27 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -3796,10 +4529,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Mar 28 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -3807,10 +4543,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Mar 29 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -3818,10 +4557,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Mar 30 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -3829,10 +4571,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   31
@@ -3840,10 +4585,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -3852,13 +4600,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="1"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -3866,10 +4619,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -3877,10 +4633,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -3888,10 +4647,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -3899,10 +4661,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   6
@@ -3910,10 +4675,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   7
@@ -3921,10 +4689,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   8
@@ -3933,13 +4704,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="2"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   9
@@ -3947,10 +4723,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   10
@@ -3958,10 +4737,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   11
@@ -3969,10 +4751,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   12
@@ -3980,10 +4765,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   13
@@ -3991,10 +4779,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   14
@@ -4002,10 +4793,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   15
@@ -4014,13 +4808,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="3"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   16
@@ -4028,21 +4827,27 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   17
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
                   class="date-picker-date date-picker-calendar-item active"
+                  data-index="2"
                   type="button"
                 >
                   18
@@ -4050,10 +4855,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   19
@@ -4061,10 +4869,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   20
@@ -4072,10 +4883,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   21
@@ -4083,10 +4897,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   22
@@ -4095,13 +4912,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="4"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   23
@@ -4109,10 +4931,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   24
@@ -4120,10 +4945,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   25
@@ -4131,10 +4959,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   26
@@ -4142,10 +4973,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -4153,10 +4987,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -4164,10 +5001,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -4176,13 +5016,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="5"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -4190,10 +5035,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -4201,10 +5049,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -4212,10 +5063,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 03 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -4223,10 +5077,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat May 04 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -4234,10 +5091,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun May 05 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -4245,10 +5105,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon May 06 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   6
@@ -4259,13 +5122,22 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
 
 exports[`Internationalization FirstDayOfWeek first day of the week should start on Wednesday 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -4292,6 +5164,9 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-5"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -4312,17 +5187,25 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-5"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
+          aria-label="April 2019"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -4421,6 +5304,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the previous month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the previous month"
                   type="button"
                 >
                   <svg
@@ -4435,6 +5319,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select current date"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select current date"
                   type="button"
                 >
                   <svg
@@ -4449,6 +5334,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
                 <button
                   aria-label="Select the next month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the next month"
                   type="button"
                 >
                   <svg
@@ -4465,9 +5351,12 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -4549,13 +5438,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="0"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Mar 27 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -4563,10 +5457,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Mar 28 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -4574,10 +5471,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Mar 29 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -4585,10 +5485,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Mar 30 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -4596,10 +5499,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item previous-month-date"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   31
@@ -4607,10 +5513,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -4618,10 +5527,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -4630,13 +5542,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="1"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -4644,10 +5561,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -4655,10 +5575,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -4666,10 +5589,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   6
@@ -4677,10 +5603,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   7
@@ -4688,10 +5617,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   8
@@ -4699,10 +5631,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   9
@@ -4711,13 +5646,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="2"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   10
@@ -4725,10 +5665,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   11
@@ -4736,10 +5679,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   12
@@ -4747,10 +5693,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   13
@@ -4758,10 +5707,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   14
@@ -4769,10 +5721,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   15
@@ -4780,10 +5735,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   16
@@ -4792,24 +5750,32 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="3"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   17
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
                   class="date-picker-date date-picker-calendar-item active"
+                  data-index="1"
                   type="button"
                 >
                   18
@@ -4817,10 +5783,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   19
@@ -4828,10 +5797,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   20
@@ -4839,10 +5811,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   21
@@ -4850,10 +5825,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   22
@@ -4861,10 +5839,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   23
@@ -4873,13 +5854,18 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="4"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   24
@@ -4887,10 +5873,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   25
@@ -4898,10 +5887,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   26
@@ -4909,10 +5901,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -4920,10 +5915,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -4931,10 +5929,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -4942,10 +5943,13 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -4956,13 +5960,22 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
 
 exports[`Internationalization renders the date picker in russian 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -4989,6 +6002,9 @@ exports[`Internationalization renders the date picker in russian 1`] = `
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-1"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -5009,17 +6025,25 @@ exports[`Internationalization renders the date picker in russian 1`] = `
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-1"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
+          aria-label="April 2019"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -5253,6 +6277,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
                 <button
                   aria-label="Select the previous month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the previous month"
                   type="button"
                 >
                   <svg
@@ -5267,6 +6292,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
                 <button
                   aria-label="Select current date"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select current date"
                   type="button"
                 >
                   <svg
@@ -5281,6 +6307,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
                 <button
                   aria-label="Select the next month"
                   class="nav-btn nav-btn-monospaced btn"
+                  title="Select the next month"
                   type="button"
                 >
                   <svg
@@ -5297,9 +6324,12 @@ exports[`Internationalization renders the date picker in russian 1`] = `
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -5381,13 +6411,18 @@ exports[`Internationalization renders the date picker in russian 1`] = `
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="0"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -5395,10 +6430,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -5406,10 +6444,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -5417,10 +6458,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -5428,10 +6472,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -5439,10 +6486,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   6
@@ -5450,10 +6500,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   7
@@ -5462,13 +6515,18 @@ exports[`Internationalization renders the date picker in russian 1`] = `
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="1"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   8
@@ -5476,10 +6534,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   9
@@ -5487,10 +6548,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   10
@@ -5498,10 +6562,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   11
@@ -5509,10 +6576,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   12
@@ -5520,10 +6590,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   13
@@ -5531,10 +6604,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   14
@@ -5543,13 +6619,18 @@ exports[`Internationalization renders the date picker in russian 1`] = `
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="2"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   15
@@ -5557,10 +6638,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   16
@@ -5568,21 +6652,27 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   17
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
                   class="date-picker-date date-picker-calendar-item active"
+                  data-index="3"
                   type="button"
                 >
                   18
@@ -5590,10 +6680,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   19
@@ -5601,10 +6694,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   20
@@ -5612,10 +6708,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   21
@@ -5624,13 +6723,18 @@ exports[`Internationalization renders the date picker in russian 1`] = `
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="3"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   22
@@ -5638,10 +6742,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   23
@@ -5649,10 +6756,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   24
@@ -5660,10 +6770,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   25
@@ -5671,10 +6784,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   26
@@ -5682,10 +6798,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   27
@@ -5693,10 +6812,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   28
@@ -5705,13 +6827,18 @@ exports[`Internationalization renders the date picker in russian 1`] = `
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              data-index="4"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="0"
+                  tabindex="-1"
                   type="button"
                 >
                   29
@@ -5719,10 +6846,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
+                  data-index="1"
+                  tabindex="-1"
                   type="button"
                 >
                   30
@@ -5730,10 +6860,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="2"
+                  tabindex="-1"
                   type="button"
                 >
                   1
@@ -5741,10 +6874,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="3"
+                  tabindex="-1"
                   type="button"
                 >
                   2
@@ -5752,10 +6888,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 03 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="4"
+                  tabindex="-1"
                   type="button"
                 >
                   3
@@ -5763,10 +6902,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat May 04 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="5"
+                  tabindex="-1"
                   type="button"
                 >
                   4
@@ -5774,10 +6916,13 @@ exports[`Internationalization renders the date picker in russian 1`] = `
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun May 05 2019"
                   class="date-picker-date date-picker-calendar-item next-month-date"
+                  data-index="6"
+                  tabindex="-1"
                   type="button"
                 >
                   5
@@ -5921,6 +7066,12 @@ exports[`Internationalization renders the date picker in russian 1`] = `
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;

@@ -3,7 +3,7 @@
 exports[`ClayTabs renders 1`] = `
 <div>
   <ul
-    class="nav nav-underline"
+    class="nav nav-tabs"
     role="tablist"
   />
 </div>
@@ -12,7 +12,7 @@ exports[`ClayTabs renders 1`] = `
 exports[`ClayTabs renders with items 1`] = `
 <div>
   <ul
-    class="nav nav-underline"
+    class="nav nav-tabs"
     role="tablist"
   >
     <li
@@ -24,6 +24,7 @@ exports[`ClayTabs renders with items 1`] = `
         class="nav-link active btn btn-unstyled"
         data-testid="tabItem"
         role="tab"
+        tabindex="0"
         type="button"
       >
         Dummy1

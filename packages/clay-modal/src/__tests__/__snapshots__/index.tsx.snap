@@ -8,12 +8,14 @@ exports[`ClayModal renders 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-suppressed="true"
     />
     <div
       class="fade modal d-block show"
     >
       <div
         aria-labelledby="clay-modal-label-1"
+        aria-modal="true"
         class="modal-dialog"
         role="dialog"
         tabindex="-1"
@@ -24,12 +26,12 @@ exports[`ClayModal renders 1`] = `
           <div
             class="modal-header"
           >
-            <div
+            <h1
               class="modal-title"
               id="clay-modal-label-1"
             >
               Foo
-            </div>
+            </h1>
             <button
               aria-label="close"
               class="close btn btn-unstyled"
@@ -76,7 +78,10 @@ exports[`ClayModal renders 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-suppressed="true"
+  />
 </body>
 `;
 
@@ -88,12 +93,14 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-suppressed="true"
     />
     <div
       class="fade modal d-block show"
     >
       <div
         aria-labelledby="clay-modal-label-3"
+        aria-modal="true"
         class="modal-dialog"
         role="dialog"
         tabindex="-1"
@@ -113,12 +120,12 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
                 <div
                   class="modal-title-section"
                 >
-                  <div
+                  <h1
                     class="modal-title"
                     id="clay-modal-label-3"
                   >
                     Modal Title
-                  </div>
+                  </h1>
                 </div>
               </div>
               <div
@@ -140,7 +147,10 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-suppressed="true"
+  />
 </body>
 `;
 
@@ -152,12 +162,14 @@ exports[`ClayModal renders a body component with url 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-suppressed="true"
     />
     <div
       class="fade modal d-block show"
     >
       <div
         aria-labelledby="clay-modal-label-7"
+        aria-modal="true"
         class="modal-dialog"
         role="dialog"
         tabindex="-1"
@@ -177,7 +189,10 @@ exports[`ClayModal renders a body component with url 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-suppressed="true"
+  />
 </body>
 `;
 
@@ -189,12 +204,14 @@ exports[`ClayModal renders a footer component with buttons 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-suppressed="true"
     />
     <div
       class="fade modal d-block show"
     >
       <div
         aria-labelledby="clay-modal-label-8"
+        aria-modal="true"
         class="modal-dialog"
         role="dialog"
         tabindex="-1"
@@ -240,7 +257,10 @@ exports[`ClayModal renders a footer component with buttons 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-suppressed="true"
+  />
 </body>
 `;
 
@@ -252,12 +272,14 @@ exports[`ClayModal renders with Header 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-suppressed="true"
     />
     <div
       class="fade modal d-block show"
     >
       <div
         aria-labelledby="clay-modal-label-2"
+        aria-modal="true"
         class="modal-dialog"
         role="dialog"
         tabindex="-1"
@@ -268,12 +290,12 @@ exports[`ClayModal renders with Header 1`] = `
           <div
             class="modal-header"
           >
-            <div
+            <h1
               class="modal-title"
               id="clay-modal-label-2"
             >
               Foo
-            </div>
+            </h1>
             <button
               aria-label="close"
               class="close btn btn-unstyled"
@@ -293,7 +315,10 @@ exports[`ClayModal renders with Header 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-suppressed="true"
+  />
 </body>
 `;
 
@@ -305,12 +330,14 @@ exports[`ClayModal renders with center 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-suppressed="true"
     />
     <div
       class="fade modal d-block show"
     >
       <div
         aria-labelledby="clay-modal-label-6"
+        aria-modal="true"
         class="modal-dialog modal-dialog-centered"
         role="dialog"
         tabindex="-1"
@@ -321,7 +348,10 @@ exports[`ClayModal renders with center 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-suppressed="true"
+  />
 </body>
 `;
 
@@ -333,12 +363,14 @@ exports[`ClayModal renders with size 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-suppressed="true"
     />
     <div
       class="fade modal d-block show"
     >
       <div
         aria-labelledby="clay-modal-label-4"
+        aria-modal="true"
         class="modal-dialog modal-lg"
         role="dialog"
         tabindex="-1"
@@ -349,7 +381,10 @@ exports[`ClayModal renders with size 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-suppressed="true"
+  />
 </body>
 `;
 
@@ -361,12 +396,14 @@ exports[`ClayModal renders with status 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-suppressed="true"
     />
     <div
       class="fade modal d-block show"
     >
       <div
         aria-labelledby="clay-modal-label-5"
+        aria-modal="true"
         class="modal-dialog modal-success"
         role="dialog"
         tabindex="-1"
@@ -377,6 +414,9 @@ exports[`ClayModal renders with status 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-suppressed="true"
+  />
 </body>
 `;
